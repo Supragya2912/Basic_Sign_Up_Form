@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+        function myFunction() {
+            var fname = document.getElementById("name");
+            var lname = document.getElementById("lname");
+            var addr = document.getElementById("add");
+            var dob = document.getElementById("date");
+            var emailid = document.getElementById("email");
+            var psd = document.getElementById("newpass");
+
+            if (fname.value.trim() == "") {
+                // alert("blank name");
+                fname.style.border = " solid 3px red";
+                return false;
+            }
+            else if (lname.value.trim() == "") {
+                alert("blank name");
+                //lname.style.border = "solid 3px red";
+                return false;
+            }
+
+
+        }
+
+
+    </script>
+    <style>
+        body {
+            background-image: url("img2.jpg");
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-weight: 100;
+            font-family: sans-serif;
+        }
+
+        .reg {
+            width: 468px;
+            margin-left: 776px;
+            padding: 10px;
+            color: white;
+            display: inline-block;
+            background-color: black;
+            text-align: center;
+            margin-top: 2%;
+            border-radius: 10px;
+        }
+
+        .container {
+            background-color: orange;
+            width: 490px;
+            display: inline-block;
+            margin-left: 776px;
+            border-radius: 10px;
+        }
+
+        .lnamelbl {
+            position: relative;
+            top: -73px;
+            margin-left: 268px;
+            margin-top: 25px;
+            color: black;
+            font-size: x-small;
+
+        }
+
+        .lname {
+            position: relative;
+            margin-left: 260px;
+            margin-top: 25px;
+            top: -72px;
+            height: 28px;
+            outline: none;
+            border: none;
+            background: none;
+            border-bottom: 2px solid red;
+        }
+
+        .lbl {
+            position: relative;
+            top: -68px;
+            color: black;
+            font-size: x-small;
+            margin-left: 15px;
+
+        }
+
+        .fname {
+            margin-left: 13px;
+            margin-top: 25px;
+            outline: none;
+            border: none;
+            height: 28px;
+            outline: none;
+            border: none;
+            background: none;
+            border-bottom: 2px solid red;
+        }
+
+        .flbl {
+            position: relative;
+            font-size: x-small;
+            color: black;
+            margin-left: 15px;
+        }
+
+        .set {
+            margin-right: 150px;
+            margin-top: 100px;
+            outline: none;
+            border: none;
+            height: 28px;
+        }
+
+        .container [type="inf"] {
+            position: relative;
+            margin-left: 12px;
+            margin-top: 11px;
+            top: -68px;
+            outline: none;
+            border: none;
+            background: transparent;
+            border-bottom: 2px solid red;
+            height: 28px;
+
+        }
+
+        .container .btn {
+            position: relative;
+            color: black;
+            background-color: chartreuse;
+            font-size: large;
+            margin-bottom: 15px;
+            margin-left: 66px;
+            padding: 4px 14px;
+            border-radius: 33px;
+            width: 382px;
+            outline: none;
+            transition-duration: 0.4s;
+        }
+
+        .container .btn:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #date {
+            position: relative;
+            margin-left: 12px;
+            margin-top: 11px;
+            top: -68px;
+            outline: none;
+            border: none;
+            background: transparent;
+            border-bottom: 2px solid red;
+            height: 28px;
+
+        }
+
+        #newpass {
+            position: relative;
+            margin-left: 12px;
+            margin-top: 11px;
+            top: -68px;
+            outline: none;
+            border: none;
+            background: transparent;
+            border-bottom: 2px solid red;
+            height: 28px;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div>
+        <h2 class="reg">Register</h2>
+    </div>
+    <form onsubmit="return myFunction();" action="login.html">
+        <div class="container">
+
+            <div class="text-box">
+                <input type="text" class="fname" id="name" placeholder="Name" /><br>
+                <label class="flbl">First Name</label>
+            </div>
+
+            <div class="text-box">
+                <input type="text" class="lname" id="lastname" placeholder="Last Name" required><br>
+                <label class="lnamelbl">Last Name</label>
+            </div>
+
+            <div class="text-box">
+                <input type="inf" id="add" class="set" placeholder="Address" /><br>
+                <label class="lbl">Address</label>
+            </div>
+            <div class="text-box">
+                <input type="date" id="date" class="set" placeholder="Date of Birth" /><br>
+                <label class="lbl">Date Of Birth</label>
+            </div>
+            <div class="text-box">
+                <input type="inf" id="email" class="set" placeholder="Email" /><br>
+                <labe class="lbl">Email</label>
+                    <br>
+            </div>
+
+            <div class="text-box">
+            <input type="password" id="newpass" class="set" placeholder="Password" /><br>
+            <label class="lbl">Password</label>
+            </div>
+            <button class="btn btn-secondary" type="submit">REGISTER</button>
+            <br>
+        </div>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <script type="text/javascript">
+        function myFunction() {
+            var user = document.getElementById("uname");
+            var passd = document.getElementById("pass");
+
+            if (user.value.trim() == "") {
+                //alert("Blank Username");
+                user.style.border = "solid 3px red";
+                return false;
+            }
+            else if (passd.value.trim() == "") {
+                //alert("Blank password");
+                passd.style.border = "solid 3px red";
+
+                return false;
+            }
+            else if (passd.value.trim().length < 5) {
+                alert("password too short");
+                passd.style.border = "solid 3px red";
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+
+    </script>
+    <style>
+        body {
+            background: url("img.jpg");
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-weight: 100;
+            font-family: sans-serif;
+        }
+
+        .container {
+            background-color: black;
+            background-repeat: no-repeat;
+            color: white;
+            display: inline-block;
+            padding: 18px;
+            margin-top: 180px;
+            margin-left: 468px;
+            width: 254px;
+            border: 20px solid brown;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+
+        .btn {
+            
+            color: black;
+            font-size: large;
+            padding: 4px 14px;
+            border-radius:33px;
+            width: 220px;
+            margin: 2px;
+            cursor: pointer;
+            transition: 0.4s;
+            outline: none;
+            
+        }
+        
+        .container .btn:hover {
+            background-color: brown;
+            color: white;
+        }
+
+
+        .container input[type="username"],
+        [type="password"] {
+            outline: none;
+            border: none;
+            color:white;
+            background: transparent;
+            border-bottom: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .pb :active 
+        {
+            color: red;
+            font-size: small;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div class="container">
+        <h2>LOGIN</h2>
+
+        <form onsubmit="return myFunction();" action="message.html">
+
+            <div class="text-box">
+                <input type="username" id="uname" placeholder="Username" />
+            </div>
+
+            <div class="text-box">
+                <input type="password" id="pass" placeholder="Password" />
+            </div>
+
+            <button class="btn btn-primary" type="submit">LOGIN</button>
+            <br><br>
+            <a href="forpass.html" class="pb">Forgot Password?</a>
+            <br><br>
+            <a href="signup.html" class="pb">Sign Up</a>
+        </form>
+
+</body>
+
+</html>
